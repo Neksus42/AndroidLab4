@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">lab3pr</string>
+    <string name="textForButton1">Менять положение</string>
+    <string name="textForButton2">Вернуть положение</string>
+    <string name="textForTV">Количество нажатий: %1$d</string>
+</resources>
