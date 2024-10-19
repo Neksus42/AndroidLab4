@@ -3,4 +3,6 @@
     <string name="textForButton1">Менять положение</string>
     <string name="textForButton2">Вернуть положение</string>
     <string name="textForTV">Количество нажатий: %1$d</string>
+    <string name="toastMessageButton1">Button 1 clicked</string>
+    <string name="toastMessageButton2">Button 2 clicked</string>
 </resources>

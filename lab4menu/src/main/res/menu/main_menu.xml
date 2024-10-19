@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <!-- Пункт меню с иконкой -->
+    <item
+        android:id="@+id/action_settings"
+
+        android:title="ТестМеню"
+        app:showAsAction="ifRoom" />
+
+    <!-- Пункт меню без иконки -->
+    <item
+        android:id="@+id/action_about"
+        android:title="ТестМеню2"
+        app:showAsAction="never" />
+</menu>
