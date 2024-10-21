@@ -23,3 +23,4 @@ rootProject.name = "Lab3"
 include(":app")
 include(":lab3pr")
 include(":lab4menu")
+include(":lab4check")
