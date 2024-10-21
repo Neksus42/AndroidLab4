@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         Button button1 = (Button)findViewById(R.id.button);
         Button button2 = (Button)findViewById(R.id.button2);
         registerForContextMenu(button1);
+        registerForContextMenu(button2);
 
         TextView TL = (TextView)findViewById(R.id.TextView1);
 
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             startActivity(intent);
             return true;
         } else if (id == R.id.exit) {
-            finishAffinity();
+            finish();
 
         } else if (id == R.id.action_secret) {
 

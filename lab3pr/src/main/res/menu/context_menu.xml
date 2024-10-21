@@ -3,5 +3,7 @@
     <item
         android:id="@+id/item_about"
         android:title="О программе" />
+    <item android:id="@+id/item_nothing"
+        android:title="Ничего не делать" />
 
 </menu>

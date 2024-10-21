@@ -29,5 +29,5 @@
         android:id="@+id/action_secret"
         android:title="Доп меню"
         app:showAsAction="never"
-        android:visible="false" /> <!-- По умолчанию скрыт -->
+        android:visible="false" />
 </menu>
