@@ -89,6 +89,12 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             Intent intent = new Intent(MainActivity.this, SecretActivity.class);
             startActivity(intent);
             return true;
+        }else if (id == R.id.Result) {
+
+            Intent intent = new Intent(MainActivity.this, ResultActivity.class);
+            intent.putExtra("result_value", counter[0]);
+            startActivity(intent);
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
@@ -101,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         int id = v.getId();
         if (id == R.id.button) {
             ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams)button2.getLayoutParams();
-            // dp to px
+
             if (params.topMargin<500) {
                 params.topMargin = params.topMargin + Math.round(20 * getResources().getDisplayMetrics().density);
             }
@@ -144,6 +150,33 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
             isSecretChecked = b;
             invalidateOptionsMenu();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        Button button2 = findViewById(R.id.button2);
+        ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) button2.getLayoutParams();
+        outState.putInt("topMargin", params.topMargin);
+        outState.putInt("counter_value", counter[0]);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        counter[0] = savedInstanceState.getInt("counter_value", 0);
+        TextView TL = (TextView)findViewById(R.id.TextView1);
+        TL.setText(getResources().getString(R.string.textForTV, counter[0]));
+
+        Button button2 = findViewById(R.id.button2);
+        ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) button2.getLayoutParams();
+        params.topMargin = savedInstanceState.getInt("topMargin", Math.round(10 * getResources().getDisplayMetrics().density));
+        button2.setLayoutParams(params);
+
+
+
+
     }
 }
 
